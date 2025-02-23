@@ -14,7 +14,7 @@ MY_LONG = 3.379206
 
 
 def is_iss_overhead():
-    '''Return True if ISS is'''
+    '''Returns True if ISS location relatively corresponds'''
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
     data = response.json()
@@ -28,6 +28,7 @@ def is_iss_overhead():
 
 
 def is_night():
+    '''Returns True if it's night time'''
     parameters = {
         "lat": MY_LAT,
         "lng": MY_LONG,
@@ -45,9 +46,11 @@ def is_night():
     if time_now >= sunset or time_now <= sunrise:
         return True
 
-
+# Loops keeps keeps Code running on the background 
 while True:
+    # Time machanisn for loop runtime specification
     time.sleep(60)
+    # Condition run if both functions are True
     if is_iss_overhead() and is_night():
         connector = smtplib.SMTP("smtp.gmail.com")
         connector.starttls()
