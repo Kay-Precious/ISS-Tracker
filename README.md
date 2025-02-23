@@ -9,6 +9,7 @@ Requirements
 - smtplib library
 - datetime library
 - API keys for Open Notify and Sunrise-Sunset API
+- For email password, enable one-step verification and generate a app password.
 
 Installation
 
