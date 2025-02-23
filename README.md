@@ -37,3 +37,4 @@ Usage
 2. The script will send an email notification when the ISS is overhead and it's nighttime
 
 Note: Make sure to enable less secure apps in your Google account settings to allow the script to send emails.
+---Make sure device is connected to internet, if not code will raise an Error.
