@@ -35,10 +35,4 @@ Usage
 1. Run the script using python iss_tracker.py
 2. The script will send an email notification when the ISS is overhead and it's nighttime
 
-Future Development
-
-- Implement a more accurate method for determining nighttime
-- Add a feature to track the ISS's trajectory
-- Use a more secure method for storing email credentials
-
 Note: Make sure to enable less secure apps in your Google account settings to allow the script to send emails.
