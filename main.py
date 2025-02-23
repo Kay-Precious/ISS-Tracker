@@ -3,8 +3,10 @@ from datetime import datetime
 import smtplib
 import time
 
-MY_EMAIL = "kayprecious977@gmail.com"
-MY_PASSWORD = "pmmltzvfggebuvfi"
+MY_EMAIL = "___your email___"
+MY_PASSWORD = "___your pasword___"
+
+# Modify to your lng and lat
 # Your latitude
 MY_LAT = 6.524379
 # Your longitude
@@ -12,6 +14,7 @@ MY_LONG = 3.379206
 
 
 def is_iss_overhead():
+    '''Return True if ISS is'''
     response = requests.get(url="http://api.open-notify.org/iss-now.json")
     response.raise_for_status()
     data = response.json()
@@ -51,6 +54,6 @@ while True:
         connector.login(user=MY_EMAIL, password=MY_PASSWORD)
         connector.sendmail(
             from_addr=MY_EMAIL,
-            to_addrs="kayprecious779@gmail.com",
+            to_addrs="___recipient's email (you can send mail to yourself too)___",
             msg="Subject:Look-Up\n\nThe ISS is above you in the sky."
         )
