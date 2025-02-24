@@ -6,7 +6,7 @@ import time
 MY_EMAIL = "___your email___"
 MY_PASSWORD = "___your pasword___"
 
-# Modify to your lng and lat
+# Modify to your location lng and lat
 # Your latitude
 MY_LAT = 6.524379
 # Your longitude
